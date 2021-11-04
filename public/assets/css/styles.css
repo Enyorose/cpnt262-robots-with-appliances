@@ -1,0 +1,38 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HERO SECTION */
+
+/* Navigation */
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.logo {
+  font-size: clamp(1rem, 5vw, 4rem);
+  border: 2px black solid;
+  margin: 0;
+  padding: 0px 10px;
+}
+
+.nav-list {
+  display: flex;
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-weight: 300;
+  gap: 5rem;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: black;
+}
