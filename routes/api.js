@@ -5,7 +5,7 @@ const express = require('express')
 const app = express()
 const dotenv = require('dotenv').config()
 
-const gallery = require('./gallery')
+const gallery = require('../models/seeds/images')
 const randomItem = require('./random-item')
 
 /*****************/
