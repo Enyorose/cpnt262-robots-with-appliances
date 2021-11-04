@@ -109,4 +109,4 @@ const gallery = [
 }
 ]
 
-module.export = gallery;
+module.exports = gallery;
