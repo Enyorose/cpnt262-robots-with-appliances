@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Table Lamp",
+    "description": "photo of a table lamp",
+    "imageSrc": "publicassetsimagesFurnitures\table-lamp.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "Lighting"
+  },
+  {
+    "id": 2,
+    "title": "Floor Lamp",
+    "description": "Photo of a floor lamp",
+    "imageSrc": "publicassetsimagesFurnitures\floor-lamp.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "Lighting"
+  },
+  {
+    "id": 3,
+    "title": "Hanging Lamp",
+    "description": "photo of a hanging lamp",
+    "imageSrc": "publicassetsimagesFurnitureshanging-lamp.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "Lighting"
+  },
+  {
+    "id": 4,
+    "title": "Samsung Small TV",
+    "description": "photo of a small samsung tv",
+    "imageSrc": "publicassetsimagesFurnituressm-tv.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "TV"
+  },
+  {
+    "id": 5,
+    "title": "Samsung Medium TV",
+    "description": "photo of a medium tv",
+    "imageSrc": "publicassetsimagesFurnituresmd-tv.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "TV"
+  },
+  {
+    "id": 6,
+    "title": "Samsung Large TV",
+    "description": "photo of large tv",
+    "imageSrc": "publicassetsimagesFurnitureslg-tv.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "TV"
+  },
+  {
+    "id": 7,
+    "title": "Vegan Leather Sofa",
+    "description": "Photo of Vegan Leather Sofa beside the window",
+    "imageSrc": "publicassetsimagesVeganLeatherSofa.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "Sofa"
+  },
+  {
+    "id": 8,
+    "title": "Fabric Sofa",
+    "description": "Photo of Fabric sofa with a cat on it",
+    "imageSrc": "publicassetsimagesFabricSofa.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "Sofa"
+  },
+  {
+    "id": 9,
+    "title": "Leather Sofa",
+    "description": "Photo of Leather sofa",
+    "imageSrc": "publicassetsimagesleatherSofa.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "Sofa"
+  },
+  {
+    "id": 10,
+    "title": "Round Oak Table",
+    "description": "photo of a round oak table",
+    "imageSrc": "publicassetsimagesOakCoffeeTable.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "coffee table"
+  },
+  {
+    "id": 11,
+    "title": "Cherry Coffee Table",
+    "description": "photo of a cherry coffee table with a laptop",
+    "imageSrc": "publicassetsimagesCherryCoffeeTable.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "coffee table"
+  },
+  {
+    "id": 12,
+    "title": "Pine Coffee Table",
+    "description": "photo of a pine coffee table",
+    "imageSrc": "publicassetsimagesMahohganyTable.jpg",
+    "width": "450",
+    "height": "300",
+    "category": "coffee table"
+  }
+]
