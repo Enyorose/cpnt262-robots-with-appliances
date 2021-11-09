@@ -1,3 +1,12 @@
+/******************/
+/* Import Modules */
+/******************/
+
+const express = require('express')
+const app = express()
+
+
+// Use middleware for index page
 app.use(express.static('public'))
 
 

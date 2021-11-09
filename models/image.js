@@ -1,112 +1,39 @@
-const gallery = [
-  {
-    id: 1,
-    title: 'Table Lamp',
-    description: 'photo of a table lamp',
-    imageSrc: 'public\assets\images\Furnitures\table-lamp.jpg',
-    width:'450',
-    height:'300',
-    category:'Lighting',
-  },
-  {
-    id: 2,
-    title: 'Floor Lamp',
-    description: 'Photo of a floor lamp',
-    imageSrc: 'public\assets\images\Furnitures\floor-lamp.jpg',
-    width:'450',
-    height:'300',
-    category: 'Lighting',
-  },
-  {
-    id: 3,
-    title: 'Hanging Lamp',
-    description: 'photo of a hanging lamp',
-    imageSrc:'public\assets\images\Furnitures\hanging-lamp.jpg',
-    width: '450',
-    height:'300',
-    category:'Lighting',
-  },
-  {
-    id: 4,
-    title: 'Samsung Small TV',
-    description: 'photo of a small samsung tv',
-    imageSrc:'public\assets\images\Furnitures\sm-tv.jpg',
-    width:'450',
-    height:'300',
-    category: 'TV',
-  },
-  {
-    id: 5,
-    title: 'Samsung Medium TV',
-    description: 'photo of a medium tv',
-    imageSrc:'public\assets\images\Furnitures\md-tv.jpg',
-    width:'450',
-    height:'300',
-    category: 'TV',
-  },
-  {
-    id: 6,
-    title: 'Samsung Large TV',
-    description: 'photo of large tv',
-    imageSrc:'public\assets\images\Furnitures\lg-tv.jpg',
-    width:'450',
-    height:'300',
-    category: 'TV',
-  },
-  {
-    id: 7,
-    title: 'Vegan Leather Sofa'  ,
-    description: 'Photo of Vegan Leather Sofa beside the window' ,
-    imageSrc:'public\assets\images\VeganLeatherSofa.jpg',
-    width:'450',
-    height:'300',
-    category: 'Sofa',
-  },
-  {
-    id: 8,
-    title: 'Fabric Sofa',
-    description:'Photo of Fabric sofa with a cat on it',
-    imageSrc:'public\assets\images\FabricSofa.jpg',
-    width:'450',
-    height:'300',
-    category: 'Sofa',
-  },
-  {
-    id: 9,
-    title: 'Leather Sofa',
-    description:'Photo of Leather sofa',
-    imageSrc:'public\assets\images\leatherSofa.jpg',
-    width:'450',
-    height:'300',
-    category: 'Sofa',
-  },
-  {
-    id: 10,
-    title:'Round Oak Table',
-    description:'photo of a round oak table',
-    imageSrc: 'public\assets\images\OakCoffeeTable.jpg',
-    width:'450',
-    height:'300',
-    category: 'coffee table',
-  },
-  {
-    id: 11,
-    title: 'Cherry Coffee Table',
-    description: 'photo of a cherry coffee table with a laptop',
-    imageSrc: 'public\assets\images\CherryCoffeeTable.jpg',
-    width:'450',
-    height:'300',
-    category: 'coffee table',
-  },
-  {
-    id: 12,
-    title: 'Pine Coffee Table',
-    description: 'photo of a pine coffee table',
-    imageSrc:'public\assets\images\MahohganyTable.jpg',
-    width:'450',
-    height:'300',
-    category: 'coffee table',
-  }
-  ]
-  
-  module.exports = gallery;
+/***********************/
+/* Connect to Database */
+/***********************/
+
+const mongoose = require('mongoose')
+const dotenv = require('dotenv').config()
+
+mongoose.connect(
+  process.env.MONGODB_URL,
+  { useUnifiedTopology: true, useNewUrlParser: true },
+  )
+  .then(function(){
+    console.log('Connected to DB...')
+  })
+  .catch(function(err){
+    console.log(err)
+  });
+
+/****************************/
+/* Read array from database */
+/****************************/
+
+// Define schema
+
+const imageSchema = new mongoose.Schema({
+  id: Number,
+  title: String,
+  description: String,
+  imageSrc: String,
+  width: String,
+  height: String,
+  category: String
+})
+
+// Compile schema
+
+const Images = mongoose.model('image', imageSchema)
+
+module.exports = Images
