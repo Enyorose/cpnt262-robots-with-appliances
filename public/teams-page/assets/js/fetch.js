@@ -24,7 +24,7 @@ const teamMembers = [
     name: 'John paul Adobas',
     profilePic: '',
     title: 'Front End JS Expert',
-    bio: '',
+    bio: 'Full Stack Developer',
     github: 'https://github.com/jaypee06'
   }
 ]
