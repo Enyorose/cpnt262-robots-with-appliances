@@ -29,12 +29,12 @@ const teamMembers = [
   }
 ]
 
-teamMembers.forEach(function(picture){
+teamMembers.forEach((picture) => {
   output += 
     <figure>
       <h2 class="title">${picture.title}</h2>
       <a href="${picture.linkURL}">
-        <img src="${picture.pathURL}" alt="${picture.description}" width="${picture.width}" height="${picture.height}">
+        <img src="${picture.pathURL}" alt="${picture.description}" width="${picture.width}" height="${picture.height}"></img>
       </a>
       <figcaption>
         <a class="author" href="${picture.creditURL}">
