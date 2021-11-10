@@ -25,7 +25,7 @@ app.use((req, res) => {
     res.send({ error: 'File Not Found'})
   } else {
       res.status(404)
-      res.redirect('/404.html')
+      res.redirect('/404-page/404.html')
   }
 })
 
