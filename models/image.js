@@ -34,6 +34,6 @@ const imageSchema = new mongoose.Schema({
 
 // Compile schema
 
-const Images = mongoose.model('image', imageSchema)
+const Images = mongoose.model('Image', imageSchema)
 
 module.exports = Images
