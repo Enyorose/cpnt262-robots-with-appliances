@@ -21,7 +21,7 @@ router.get('/images', async (req, res) => {
 router.get('/images/:id', async (req, res) => {
   
   try {
-    const imagesID = await imagesGallery.findOne({ id: req.params.id })
+    const imagesID = await Images.findOne({ id: req.params.id })
     if(imagesID === null) {
       throw new Error('File Not Found')
     }
