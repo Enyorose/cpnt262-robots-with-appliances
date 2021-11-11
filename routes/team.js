@@ -22,10 +22,11 @@ teamRouter.get('/member/:name', async (req, res) => {
   
   try {
     const member = await teamMembers.findOne({ id: req.params.name })
-    if(member === null) {
+    if(!member) {
       throw new Error('File Not Found')
     }
     res.send(member)
+    console.log(member)
   } catch(err) {
     res.status(404).send({error: 'File Not Found'})
   }
