@@ -2,6 +2,7 @@ const teamMembers = [
   {
     name: 'Jessica Watson',
     profilePic:'',
+    description:'photo of jessica watson',
     title: 'Project coordinator',
     bio: 'I am a mom of a wonderful boy as well as a photographer and an aspiring web developer.',
     github: ''
@@ -9,6 +10,7 @@ const teamMembers = [
   {
     name: 'David Ha',
     profilePic:'',
+    description: 'photo of david ha',
     title: 'Front End Specialist',
     bio: 'Automotive RS Journeyman -> DJ -> Gamer -> Web Developer??',
     github: 'https://github.com/boostha'
@@ -16,6 +18,7 @@ const teamMembers = [
   {
     name: 'Jared Herman',
     profilePic:'',
+    description:'photo of jared herman',
     title: 'Data Manager',
     bio: 'Front end and back end Web Developer',
     github: 'https://github.com/jaredherman'
@@ -23,24 +26,23 @@ const teamMembers = [
   {
     name: 'John paul Adobas',
     profilePic: '',
+    description: 'photo of john paul abodas',
     title: 'Front End JS Expert',
-    bio: 'Full Stack Developer',
+    bio: '',
     github: 'https://github.com/jaypee06'
   }
 ]
 
-teamMembers.forEach((picture) => {
+teamMembers.forEach((item) => {
   output += 
-    <figure>
-      <h2 class="title">${picture.title}</h2>
-      <a href="${picture.linkURL}">
-        <img src="${picture.pathURL}" alt="${picture.description}" width="${picture.width}" height="${picture.height}"></img>
-      </a>
+    `<figure>
+      <h2 class="title">${item.name}</h2>
+        <img src="${item.profilePic}" alt="${item.description}"></img>
       <figcaption>
-        <a class="author" href="${picture.creditURL}">
-          <span>${picture.credit}</span>
+        <a class="author" href="${item.creditURL}">
+          <span>${item.credit}</span>
         </a>
       </figcaption>
-    </figure>
+    </figure>`
   
 })
