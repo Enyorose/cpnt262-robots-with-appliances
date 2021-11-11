@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url(/sait/_class-assign/cpnt-262/cpnt262-final-project/public/teams-page/assets/images/background-image.png);
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: top right;
+}
 /**************/
 /* Navigation */
 /**************/
@@ -43,6 +54,36 @@
 
 .hamburger-menu {
   display: none;
+}
+
+/*Section*/
+.members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1em;
+  margin-left: 1.5em;
+}
+figure {
+  max-width: 400px;
+  margin: 0;
+  border: .2em solid #bac1c3;
+  border-radius: 1em;
+  padding:.7em;
+  text-align: center;
+}
+img {
+  max-width: 400px;
+}
+figcaption {
+  max-width: 45ch;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5em;
+}
+.fa-github {
+  color: black;
+}
+.fa-github:hover{
+  color: rebeccapurple;
 }
 
 /* NAVIGATION MEDIA QUERY */
