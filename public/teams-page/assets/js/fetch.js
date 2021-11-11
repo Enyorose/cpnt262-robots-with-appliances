@@ -21,9 +21,10 @@ fetch('https://robot-design.herokuapp.com/api/member')
             </a>
           </figcaption>
         </figure>`
-        const team = document.querySelector('.members')
-        team.innerHTML = output
+        
     })
+    const team = document.querySelector('.members')
+    team.innerHTML = output
     console.log(item)
   })
   .catch(function(err){
