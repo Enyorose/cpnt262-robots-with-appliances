@@ -7,7 +7,7 @@ fetch('https://robot-design.herokuapp.com/api/member')
     }
     return response.json();
   })
-  .then(function(data){
+  .then(function(item){
     let output = ''
     teamMembers.forEach((item) => {
       output += 
@@ -24,6 +24,7 @@ fetch('https://robot-design.herokuapp.com/api/member')
         const team = document.querySelector('.members')
         team.innerHTML = output
     })
+    console.log(item)
   })
   .catch(function(err){
     // An error or `reject` from any of the above `.then()` blocks will end up here.
