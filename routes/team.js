@@ -3,10 +3,10 @@ const teamMembers = require('./../models/member')
 
 // Use Express router
 const express = require('express')
-const router = express.Router()
+const teamRouter = express.Router()
 
 // GET request for entire gallery
-router.get('/member', async (req, res) => {
+teamRouter.get('/member', async (req, res) => {
   
   try {
     const members = await teamMembers.find()
@@ -18,7 +18,7 @@ router.get('/member', async (req, res) => {
 
 
 // GET request for individual gallery items
-router.get('/member/:name', async (req, res) => {
+teamRouter.get('/member/:name', async (req, res) => {
   
   try {
     const member = await teamMembers.findOne({ id: req.params.name })
@@ -33,4 +33,4 @@ router.get('/member/:name', async (req, res) => {
 
 
 // export module
-module.exports = router
+module.exports = teamRouter

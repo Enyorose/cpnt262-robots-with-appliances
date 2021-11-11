@@ -5,13 +5,15 @@
 const express = require('express')
 const app = express()
 const router = require('./routes/api')
+const teamRouter = require('./routes/team')
 
 
 // Use middleware for index page
 app.use(express.static('public'))
 
 // Load routes
-app.use('/api', router)
+app.use('/api', router, teamRouter)
+
 
 
 /****************************/
