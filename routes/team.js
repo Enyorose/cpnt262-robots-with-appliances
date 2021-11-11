@@ -6,7 +6,7 @@ const express = require('express')
 const router = express.Router()
 
 // GET request for entire gallery
-router.get('/members', async (req, res) => {
+router.get('/member', async (req, res) => {
   
   try {
     const members = await teamMembers.find()
