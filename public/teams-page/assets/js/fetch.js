@@ -9,14 +9,14 @@ fetch('https://robot-design.herokuapp.com/api/member')
   })
   .then(function(item){
     let output = ''
-    teamMembers.forEach((item) => {
+    item.forEach((member) => {
       output += 
         `<figure>
-          <h2 class="title">${item.fullName}</h2>
-            <img src="${item.profilePic}" alt="${item.description}"></img>
+          <h2 class="title">${member.fullName}</h2>
+            <img src="${member.profilePic}" alt="${member.description}"></img>
           <figcaption>
-            <p>${item.bio}</p>
-            <a class="author" href="${item.github}" target="_blank">
+            <p>${member.bio}</p>
+            <a class="author" href="${member.github}" target="_blank">
             <i class="fab fa-github"></i>
             </a>
           </figcaption>
