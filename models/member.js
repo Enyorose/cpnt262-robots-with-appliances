@@ -28,7 +28,8 @@ const memberSchema = new mongoose.Schema({
   description: String,
   title: String,
   bio: String,
-  github: String
+  github: String,
+  fullName: String
 })
 
 // Compile schema

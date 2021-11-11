@@ -5,7 +5,7 @@ const teamMembers = require('./../models/member')
 const express = require('express')
 const teamRouter = express.Router()
 
-// GET request for entire gallery
+// GET request for entire list of team members
 teamRouter.get('/member', async (req, res) => {
   
   try {
@@ -17,11 +17,11 @@ teamRouter.get('/member', async (req, res) => {
 })
 
 
-// GET request for individual gallery items
+// GET request for individual team member by first name
 teamRouter.get('/member/:name', async (req, res) => {
   
   try {
-    const member = await teamMembers.findOne({ id: req.params.name })
+    const member = await teamMembers.findOne({ name: req.params.name })
     if(!member) {
       throw new Error('File Not Found')
     }
