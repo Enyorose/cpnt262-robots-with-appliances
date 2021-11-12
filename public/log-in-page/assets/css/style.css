@@ -71,7 +71,13 @@ body {
   display: none;
 }
 
+/********/
+/* Form */
+/********/
 
+.hero-title {
+  padding: 5% 0px;
+}
 
 legend {
   font-size: clamp(1rem, 2vw, 5rem);
