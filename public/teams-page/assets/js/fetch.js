@@ -1,46 +1,38 @@
-const teamMembers = [
-  {
-    name: 'Jessica Watson',
-    profilePic:'',
-    title: 'Project coordinator',
-    bio: 'I am a mom of a wonderful boy as well as a photographer and an aspiring web developer.',
-    github: ''
-  },
-  {
-    name: 'David Ha',
-    profilePic:'',
-    title: 'Front End Specialist',
-    bio: 'Automotive RS Journeyman -> DJ -> Gamer -> Web Developer??',
-    github: 'https://github.com/boostha'
-  },
-  {
-    name: 'Jared Herman',
-    profilePic:'',
-    title: 'Data Manager',
-    bio: 'Front end and back end Web Developer',
-    github: 'https://github.com/jaredherman'
-  },
-  {
-    name: 'John paul Adobas',
-    profilePic: '',
-    title: 'Front End JS Expert',
-    bio: '',
-    github: 'https://github.com/jaypee06'
-  }
-]
 
-teamMembers.forEach(function(picture){
-  output += 
-    <figure>
-      <h2 class="title">${picture.title}</h2>
-      <a href="${picture.linkURL}">
-        <img src="${picture.pathURL}" alt="${picture.description}" width="${picture.width}" height="${picture.height}">
-      </a>
-      <figcaption>
-        <a class="author" href="${picture.creditURL}">
-          <span>${picture.credit}</span>
-        </a>
-      </figcaption>
-    </figure>
-  
-})
+fetch('https://robot-design.herokuapp.com/api/member')
+  .then(function(response){
+    // JSON that is returned from the server must be converted to a JS object asynchronously.
+    if (!response.ok) {
+      throw new Error('Not 200 OK');
+    }
+    return response.json();
+  })
+  .then(function(item){
+    let output = ''
+    item.forEach((member) => {
+      output += 
+        `<figure>
+          <h2 class="title">${member.fullName}</h2>
+            <img src="${member.profilePic}" alt="${member.description}"></img>
+          <figcaption>
+            <p>${member.bio}</p>
+            <a class="author" href="${member.github}" target="_blank">
+            <i class="fab fa-github"></i>
+            </a>
+          </figcaption>
+        </figure>`
+        
+    })
+    const team = document.querySelector('.members')
+    team.innerHTML = output
+    console.log(item)
+  })
+  .catch(function(err){
+    // An error or `reject` from any of the above `.then()` blocks will end up here.
+    const error = document.querySelector('.error')
+    error.innerHTML = `
+    <h1>Turn back this page is not available</h1>
+    <h2>404 Page not found</h2>
+    `
+  });
+
