@@ -24,6 +24,11 @@ body {
     gap: 4rem;
   }
   
+  .nav-button {
+    background-color: #BAC1C3;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
 
   
   .nav-list {
