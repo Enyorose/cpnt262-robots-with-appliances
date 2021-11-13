@@ -66,14 +66,14 @@ body {
 /*Section*/
 .members {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 1em;
   margin-left: 1.5em;
 }
 figure {
   max-width: 400px;
   margin: 0;
-  border: .2em solid #bac1c3;
+  border: .2em solid  #784212;
   border-radius: 1em;
   padding:.7em;
   text-align: center;
