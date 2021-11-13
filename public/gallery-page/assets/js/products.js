@@ -1,4 +1,4 @@
-fetch('https://robot-design.herokuapp.com/api/Images')
+fetch('https://robot-design.herokuapp.com/api/images')
   .then(function(response){
     // JSON that is returned from the server must be converted to a JS object asynchronously.
     if (!response.ok) {
@@ -7,7 +7,7 @@ fetch('https://robot-design.herokuapp.com/api/Images')
     return response.json();
   })
   .then(function(gallery){
-    let output = "";
+    let output = " ";
     gallery.forEach((products) => {
         output += `
         <figure>
