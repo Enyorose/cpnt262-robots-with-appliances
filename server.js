@@ -6,6 +6,7 @@ const express = require('express')
 const app = express()
 const router = require('./routes/api')
 const teamRouter = require('./routes/team')
+const loginRouter = require('./routes/login')
 
 
 // Use middleware for index page
@@ -13,8 +14,7 @@ app.use(express.static('public'))
 
 // Load routes
 app.use('/api', router, teamRouter)
-
-
+app.use('/', loginRouter)
 
 /****************************/
 /* Handle 404, start server */
