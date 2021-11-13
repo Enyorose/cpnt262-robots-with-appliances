@@ -29,6 +29,6 @@ const subSchema = new mongoose.Schema({
 
 // Compile schema
 
-const Subscribe = mongoose.model('team-member', memberSchema)
+const Subscribe = mongoose.model('subscribe', memberSchema)
 
 module.exports = Subscribe
