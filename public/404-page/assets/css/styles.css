@@ -16,7 +16,8 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  padding: 0px 5%;
+  gap: 4rem;
 }
 
 .nav-button {
@@ -25,16 +26,21 @@ body {
   border-radius: 5px;
 }
 
-.logo-container {
-  margin-right: 40px;
-}
-
 .nav-list {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: clamp(1rem, 5vw, 2rem);
   font-weight: 300;
   gap: 5rem;
   margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.nav-items {
+  display: flex;
+  gap: 2rem;
 }
 
 .nav-list li {
@@ -69,6 +75,14 @@ body {
     margin: 0;
     padding: 2rem 0px;
     gap: 4rem;
+    transition: all 0.5s;
+    z-index: 1;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .close-menu {
@@ -102,8 +116,11 @@ body {
   .navbar {
     justify-content: space-between;
   }
-}
 
+  .nav-list-open {
+    top: 0;
+  }
+}
 /***************/
 /* 404 Section */
 /***************/
