@@ -41,12 +41,12 @@ subRouter.post('/subscriber', async (req, res) => {
     await newSub.save()
   
     console.log(newSub)
-    res.redirect('/index.html')
+    res.redirect('/subscribe-page/success.html')
 
   } catch(err) {
 
     console.log(err)
-    res.redirect('/subscribe-page/index.html')
+    res.redirect('/subscribe-page/fail.html')
     
   }
 })
