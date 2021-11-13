@@ -7,13 +7,15 @@ const app = express()
 const router = require('./routes/api')
 const teamRouter = require('./routes/team')
 const loginRouter = require('./routes/login')
+const subRouter = require('./routes/sub')
+
 
 
 // Use middleware for index page
 app.use(express.static('public'))
 
 // Load routes
-app.use('/api', router, teamRouter)
+app.use('/api', router, teamRouter, subRouter)
 app.use('/', loginRouter)
 
 /****************************/
