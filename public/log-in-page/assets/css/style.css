@@ -114,6 +114,13 @@ legend {
   text-align: center;
 }
 
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* MEDIA QUERY */
 
 @media only screen and (max-width: 950px) {
