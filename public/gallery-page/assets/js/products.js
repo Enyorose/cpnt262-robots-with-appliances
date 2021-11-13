@@ -1,114 +1,12 @@
-const gallery = [
-    {
-      id: 1,
-      title: 'Table Lamp',
-      description: 'photo of a table lamp',
-      imageSrc: '../assets/images/Furnitures/table-lamp.jpg',
-      width:'450',
-      height:'300',
-      category:'Lighting',
-    },
-    {
-      id: 2,
-      title: 'Floor Lamp',
-      description: 'Photo of a floor lamp',
-      imageSrc: '../assets/images/Furnitures/floor-lamp.jpg',
-      width:'450',
-      height:'300',
-      category: 'Lighting',
-    },
-    {
-      id: 3,
-      title: 'Hanging Lamp',
-      description: 'photo of a hanging lamp',
-      imageSrc:'../assets/images/Furnitures/hanging-lamp.jpg',
-      width: '450',
-      height:'300',
-      category:'Lighting',
-    },
-    {
-      id: 4,
-      title: 'Samsung Small TV',
-      description: 'photo of a small samsung tv',
-      imageSrc:'../assets/images/Furnitures/sm-tv.jpg',
-      width:'450',
-      height:'300',
-      category: 'TV',
-    },
-    {
-      id: 5,
-      title: 'Samsung Medium TV',
-      description: 'photo of a medium tv',
-      imageSrc:'../assets/images/Furnitures/md-tv.jpg',
-      width:'450',
-      height:'300',
-      category: 'TV',
-    },
-    {
-      id: 6,
-      title: 'Samsung Large TV',
-      description: 'photo of large tv',
-      imageSrc:'../assets/images/Furnitures/lg-tv.jpg',
-      width:'450',
-      height:'300',
-      category: 'TV',
-    },
-    {
-      id: 7,
-      title: 'Vegan Leather Sofa'  ,
-      description: 'Photo of Vegan Leather Sofa beside the window' ,
-      imageSrc:'../assets/images/Furnitures/VeganLeatherSofa.jpg',
-      width:'450',
-      height:'300',
-      category: 'Sofa',
-    },
-    {
-      id: 8,
-      title: 'Fabric Sofa',
-      description:'Photo of Fabric sofa with a cat on it',
-      imageSrc:'../assets/images/Furnitures/FabricSofa.jpg',
-      width:'450',
-      height:'300',
-      category: 'Sofa',
-    },
-    {
-      id: 9,
-      title: 'Leather Sofa',
-      description:'Photo of Leather sofa',
-      imageSrc:'../assets/images/Furnitures/leatherSofa.jpg',
-      width:'450',
-      height:'300',
-      category: 'Sofa',
-    },
-    {
-      id: 10,
-      title:'Round Oak Table',
-      description:'photo of a round oak table',
-      imageSrc: '../assets/images/Furnitures/OakCoffeeTable.jpg',
-      width:'450',
-      height:'300',
-      category: 'coffee table',
-    },
-    {
-      id: 11,
-      title: 'Cherry Coffee Table',
-      description: 'photo of a cherry coffee table with a laptop',
-      imageSrc: '../assets/images/Furnitures/CherryCoffeeTable.jpg',
-      width:'450',
-      height:'300',
-      category: 'coffee table',
-    },
-    {
-      id: 12,
-      title: 'Pine Coffee Table',
-      description: 'photo of a pine coffee table',
-      imageSrc:'../assets/images/Furnitures/MahohganyTable.jpg',
-      width:'450',
-      height:'300',
-      category: 'coffee table',
+fetch('https://robot-design.herokuapp.com/api/Images')
+  .then(function(response){
+    // JSON that is returned from the server must be converted to a JS object asynchronously.
+    if (!response.ok) {
+      throw new Error('Not 200 OK');
     }
-    ]
-    
+    return response.json();
+  })
+  .then(function(item){
     let output = "";
     gallery.forEach((products) => {
         output += `
@@ -120,3 +18,29 @@ const gallery = [
       })
 
       document.querySelector('.output').innerHTML = output;
+  })
+  .catch(function(err){
+    // An error or `reject` from any of the above `.then()` blocks will end up here.
+    const error = document.querySelector('.error')
+    error.innerHTML = `
+    <h1>Turn back this page is not available</h1>
+    <h2>404 Page not found</h2>
+    `
+  });
+
+const hamburgerMenu = document.querySelector('.hamburger')
+const closeMenu = document.querySelector('.close')
+const navList = document.querySelector('.nav-list')
+const openMenu = document.querySelector('.nav-list-open')
+
+hamburgerMenu.addEventListener('click', () => {
+  navList.classList.add('nav-list-open')
+})
+
+closeMenu.addEventListener('click', () => {
+  navList.classList.remove('nav-list-open')
+})
+
+
+    
+   
