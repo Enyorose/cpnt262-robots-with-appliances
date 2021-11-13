@@ -6,7 +6,7 @@ fetch('https://robot-design.herokuapp.com/api/Images')
     }
     return response.json();
   })
-  .then(function(item){
+  .then(function(gallery){
     let output = "";
     gallery.forEach((products) => {
         output += `
