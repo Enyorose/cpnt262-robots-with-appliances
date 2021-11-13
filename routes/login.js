@@ -53,11 +53,9 @@ loginRouter.get('/register', async (req, res) => {
 loginRouter.post('/register', async (req, res, next) => {
   userModel.register(new userModel({username: req.body.username}), req.body.password, (err) => {
     if (err) {
-      console.log('error while registering', err)
-      return next(err)
+      res.redirect('/sign-up-page/signup-fail.html')
     }
-    console.log('success')
-    res.send('<h1>Success</h1>')
+    res.redirect('/sign-up-page/signup-success.html')
   })
 })
 
