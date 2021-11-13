@@ -1,8 +1,169 @@
-h1 {
-    color: blue;
-}
-
 body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+  }
+  
+  /****************/
+  /* HERO SECTION */
+  /****************/
+  
+  .hero {
+    height: 100vh;
+    background-size: cover;
+    background-position-y: 40%;
+  }
+  
+  /**************/
+  /* Navigation */
+  /**************/
+  
+  .navbar {
     display: flex;
-    color: blue;
-}
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 5%;
+    gap: 4rem;
+  }
+  
+  .nav-button {
+    background-color: #BAC1C3;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-weight: 300;
+    gap: 5rem;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .nav-items {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-list li {
+    list-style: none;
+    
+  }
+  
+  .nav-links {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1rem, 3vw, 2rem);
+  }
+  
+  .close-menu {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: none;
+  }
+  
+  /********/
+  /* Form */
+  /********/
+  
+  .hero-title {
+    padding: 5% 0px;
+  }
+  
+  legend {
+    font-size: clamp(1rem, 2vw, 5rem);
+  }
+  
+  .form {
+    margin: auto;
+    width: 30vw;
+  }
+  
+  .form-wrapper {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .form-input input {
+    width: 100%;
+  }
+  
+  .btn {
+    width: fit-content;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #BAC1C3;
+    color: black;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cta {
+    text-align: center;
+  }
+  
+  /* MEDIA QUERY */
+  
+  @media only screen and (max-width: 950px) {
+    .nav-list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: grey;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 2rem 0px;
+      gap: 4rem;
+    }
+  
+    .close-menu {
+      color: white;
+      display: initial;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+    .close {
+      width: 5vw;
+    }
+  
+    .nav-links {
+      color: white;
+    }
+  
+    .hamburger-menu {
+      display: initial;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      cursor: pointer;
+    }
+  
+    .navbar {
+      justify-content: space-between;
+    }
+    
+    .form {
+      width: 70vw;
+    }
+  }
