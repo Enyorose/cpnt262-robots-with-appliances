@@ -70,9 +70,27 @@ loginRouter.get('/login', (req, res) => {
   res.redirect('/log-in-page/login.html')
 });
 
-loginRouter.post('/login', passport.authenticate('local', { failureRedirect: '/login' }),  function(req, res) {
+loginRouter.post('/login', passport.authenticate('local', { failureRedirect: '/loginfail' }),  function(req, res) {
 	console.log(req.user)
-	res.send('<h1>Signed In</h1>');
+	res.redirect('/admin');
+});
+
+loginRouter.get('/loginfail', (req, res) => {
+  res.redirect('/log-in-page/loginfail.html')
+})
+
+/*********/
+/* ADMIN */
+/*********/
+
+loginRouter.get('/admin', connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+  res.redirect('/admin');
+});
+
+// Route to Log out
+loginRouter.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/login');
 });
 
 module.exports = loginRouter
