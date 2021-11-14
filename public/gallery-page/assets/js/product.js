@@ -20,14 +20,13 @@ fetch(`https://robot-design.herokuapp.com/api/images/${params.get('id')}`)
   .then(function(gallery){
     // Any code that depends on the `data` must go in this block
     let output = " ";
-    gallery.forEach((products) => {
         output += `
         <figure>
-        <img src="${products.imageSrc}" alt="${products.description}" width="450">
-        <figcaption>${products.title}</figcaption>
+        <img src="${gallery.imageSrc}" alt="${gallery.description}" width="450">
+        <figcaption>${gallery.title}</figcaption>
         </figure>
         `
-      })
+
 
     // 4. In the last .then(), display the character
     container.innerHTML = output;
