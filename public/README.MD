@@ -6,20 +6,20 @@
 - Jaypee A
 
 ## Team Charter Completed works
-- write an array of object for the API //Jessica,Jaypee
-- write the .js fetch code for front end gallery//David
-- write the .js fetch code for front end teams//Jessica
-- make a subscribe.html form//David
 - make a gallery.html page//Jessica
 - make a items.html// Jessica
-- make a landing.html page//David
 - make a team.html page//Jessica
-- make a 404.html page//David
-- create routes using the api data gallery//David
+- write the .js fetch code for front end teams//Jessica
 - create routes using the api data teams//Jessica
-- collected images for gallery //Jaypee
 - Set up data base in MongoDB//Jessica
 - deploy to Heroku// Jessica
+- write an array of object for the API //Jessica,Jaypee
+- collected images for gallery //Jaypee
+- write the .js fetch code for front end gallery//David
+- create routes using the api data gallery//David
+- make a subscribe.html form//David
+- make a landing.html page//David
+- make a 404.html page//David
 - Fancy feature, added sign up and log in authentication//DAVID
 
 ### Fancy Feature
