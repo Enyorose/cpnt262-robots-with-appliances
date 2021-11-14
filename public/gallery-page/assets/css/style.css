@@ -85,6 +85,12 @@ figcaption {
   font-family: 'Inter', sans-serif;
   font-size: 1.5em;
 }
+figure a {
+  background-color: #BAC1C3;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
   
   /* NAVIGATION MEDIA QUERY */
   
