@@ -20,11 +20,11 @@
 - collected images for gallery //Jaypee
 - Set up data base in MongoDB//Jessica
 - deploy to Heroku// Jessica
-- Fancy feature, added sign in and log in authentication//DAVID
+- Fancy feature, added sign up and log in authentication//DAVID
 
 ### Fancy Feature
 - The fancy feature is definitely David's brain child, please feel free to use the sign up button located on any of the pages.
-- You are able to create a new sign in, as well as log in. This will allow you to see the subscribers fetch list as well.
+- You are able to create a new sign in, as well as log in. This will allow you to enter the admin dashboard and see the subscribers fetch list as well.
 
 ### attributions
 - Hanging Lamp [Federico Lancellotti](https://unsplash.com/@feeedderico) from [Unsplash with License](https://unsplash.com/license)
