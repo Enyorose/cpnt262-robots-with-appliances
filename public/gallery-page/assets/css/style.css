@@ -94,6 +94,10 @@ figure a, button {
   padding: 5px 20px;
   border-radius: 5px;
   text-decoration: none;
+  color: black
+}
+button {
+  margin: 2em;
 }
   
   /* NAVIGATION MEDIA QUERY */
