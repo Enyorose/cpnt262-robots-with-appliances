@@ -81,7 +81,7 @@ loginRouter.get('/loginfail', (req, res) => {
 /* ADMIN */
 /*********/
 
-loginRouter.get('/admin', connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+loginRouter.get('/admin', connectEnsureLogin.ensureLoggedIn('/login'), (req, res) => {
   res.redirect('/admin');
 });
 
