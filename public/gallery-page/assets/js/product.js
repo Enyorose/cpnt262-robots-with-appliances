@@ -23,7 +23,7 @@ fetch(`https://robot-design.herokuapp.com/api/images/${params.get('id')}`)
         output += `
         <figure>
         <img src="${gallery.imageSrc}" alt="${gallery.description}" width="450">
-        <figcaption>${gallery.title}</figcaption>
+        <figcaption>${gallery.title}<p>Category: ${gallery.category}</p></figcaption>
         </figure>
         `
 

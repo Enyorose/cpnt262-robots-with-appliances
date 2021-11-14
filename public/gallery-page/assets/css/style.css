@@ -69,6 +69,9 @@ section {
   gap: 1em;
   margin-left: 1.5em;
 }
+.single-item {
+  place-items: center;
+}
 figure {
   max-width: 400px;
   margin: 0;
