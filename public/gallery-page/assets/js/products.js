@@ -12,7 +12,7 @@ fetch('https://robot-design.herokuapp.com/api/images')
         output += `
         <figure>
         <img src="${products.imageSrc}" alt="${products.description}" width="450">
-        <figcaption>${products.title}</figcaption>
+        <a href="https://robot-design.herokuapp.com/gallery-page/item.html?id=${products.id}"<figcaption>${products.title}</figcaption></a>
         </figure>
         `
       })
