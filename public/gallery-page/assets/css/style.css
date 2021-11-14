@@ -1,16 +1,14 @@
 body {
-    font-family: 'Inter', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* overflow: hidden; */
-  }
-  
-  /****************/
-  /* HERO SECTION */
-  /****************/
-  
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url(../images/bg.jpg);
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: top right;
+}
 
   /**************/
   /* Navigation */
@@ -64,6 +62,29 @@ body {
   .hamburger-menu {
     display: none;
   }
+/*Section*/
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 1em;
+  margin-left: 1.5em;
+}
+figure {
+  max-width: 400px;
+  margin: 0;
+  border: .2em solid  #784212;
+  border-radius: 1em;
+  padding:.7em;
+  text-align: center;
+}
+img {
+  max-width: 400px;
+}
+figcaption {
+  max-width: 45ch;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5em;
+}
   
   /* NAVIGATION MEDIA QUERY */
   
