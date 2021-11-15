@@ -4,6 +4,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: url(../images/bg.jpg);
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: top right;
     /* overflow: hidden; */
   }
   
